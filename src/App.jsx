@@ -15,9 +15,10 @@ export default function App() {
     <>
       <header>
         <p>React TV</p>
+        <ShowSelection showData={tvShows} setSelectedShow={setSelectedShow} />
       </header>
       <main>
-        <ShowSelection showData={tvShows} setSelectedShow={setSelectedShow} />
+        <ShowDetails key={selectedShow?.name} show={selectedShow} />
       </main>
     </>
   );
